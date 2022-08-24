@@ -1,6 +1,5 @@
 import {Bot, InlineKeyboard} from "https://deno.land/x/grammy@v1.10.1/mod.ts";
 import * as dotenv from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
-import { Update } from "https://deno.land/x/grammy@v1.10.1/platform.deno.ts";
 
 const botToken = dotenv.config().BOT_TOKEN;
 if (botToken == undefined){
@@ -13,7 +12,7 @@ bot.start();
 const me = await bot.api.getMe();
 console.info(`Started as @${me.username}`);
 
-const startInlineKeyboard = new InlineKeyboard().url("Join My Channel", "https://t.me/BotzHub").url("Source", "https://xditya.me");
+const startInlineKeyboard = new InlineKeyboard().url("Join My Channel", "https://t.me/BotzHub").url("Source", "https://github.com/xditya/mdiskDownloadLinks");
 bot.command("start", async(ctx) => {
     await ctx.reply(`Hi ${ctx.from!.first_name}, I'm @${me.username}. I can give direct download links from any mdisk link you send me!`, {
         reply_markup: startInlineKeyboard,
