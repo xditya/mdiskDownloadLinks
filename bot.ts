@@ -1,9 +1,6 @@
 import {Bot, InlineKeyboard} from "https://deno.land/x/grammy@v1.10.1/mod.ts";
-import { config } from "https://deno.land/std/dotenv/mod.ts";
 
-const cfg = await config();
-
-const botToken = cfg.BOT_TOKEN;
+const botToken = Deno.env.get("BOT_TOKEN");
 if (botToken == undefined){
     throw new Error("BOT_TOKEN not found. Add it in your .env file or environment variables.");
 }
