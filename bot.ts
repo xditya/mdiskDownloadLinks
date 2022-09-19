@@ -7,8 +7,8 @@ if (botToken == undefined){
 }
 
 console.info("Starting bot...");
-const bot = new Bot(botToken);
-bot.start();
+export const bot = new Bot(botToken);
+
 const me = await bot.api.getMe();
 console.info(`Started as @${me.username}`);
 

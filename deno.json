@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "server": "deno run --allow-net --allow-read --allow-env server.ts",
+    "serverless": "deno run --allow-net --allow-read --allow-env serverless.ts"
+  }
+}
